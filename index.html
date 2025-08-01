@@ -1,52 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Music Page</title>
-  <style>
-    body {
-      background-color: #fff0f5;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 100px;
-    }
-
-    button {
-      font-size: 18px;
-      padding: 12px 24px;
-      background-color: #ff4d6d;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #e03c5e;
-    }
-
-    audio {
-      display: none;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>My Love Song</title>
 </head>
-<body>
+<body style="text-align: center; padding-top: 100px; background-color: #fff0f5; font-family: sans-serif;">
+  <h1>Welcome Kumkum ❤️</h1>
 
-  <h1>Welcome 💖</h1>
-  <button onclick="playMusic()">Start Music</button>
-
-  <audio id="bgMusic" loop>
-    <source src="Song.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+  <audio controls autoplay loop>
+    <source src="https://store4.gofile.io/download/mcTtx1/Ab%20Mujhe%20Raat%20Din.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
   </audio>
 
-  <script>
-    function playMusic() {
-      const audio = document.getElementById("bgMusic");
-      audio.play().catch(err => {
-        alert("Music play failed: " + err.message);
-      });
-    }
-  </script>
-
+  <p style="margin-top: 20px;">Ab gaana baj raha hai 🎶</p>
 </body>
 </html>
