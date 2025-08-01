@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Music Page</title>
+  <title>Music Page</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 24px;
+      background-color: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e03c5e;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
 </head>
 <body>
+
   <h1>Welcome 💖</h1>
-  <audio controls autoplay loop>
+  <button onclick="playMusic()">Start Music</button>
+
+  <audio id="bgMusic" loop>
     <source src="Song.mp3" type="audio/mpeg">
-    Your browser does not support the audio tag.
+    Your browser does not support the audio element.
   </audio>
+
+  <script>
+    function playMusic() {
+      const audio = document.getElementById("bgMusic");
+      audio.play().catch(err => {
+        alert("Music play failed: " + err.message);
+      });
+    }
+  </script>
+
 </body>
 </html>
